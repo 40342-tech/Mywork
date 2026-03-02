@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ภาคเหนือ - WANDER.TH</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Sarabun', sans-serif; }
+        body { background-color: #f4f7f6; color: #333; }
+
+        /* Navigation Bar */
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 8%; background: white; position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo { font-size: 24px; font-weight: bold; color: #2d5a27; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { text-decoration: none; color: #555; font-weight: 500; transition: 0.3s; }
+        nav ul li a:hover { color: #2d5a27; }
+
+        /* Hero ส่วนบน (ภาคเหนือ) */
+        .hero {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1528181304800-2f140819ad1c?q=80&w=2000');
+            background-size: cover; 
+            background-position: center top; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            color: white; text-align: center; margin: 20px; border-radius: 30px;
+        }
+        .hero h1 { font-size: 60px; letter-spacing: 5px; }
+
+        /* Content Sections */
+        .content-container { padding: 50px 10%; }
+        .section-title { 
+            font-size: 32px; 
+            margin-bottom: 30px; 
+            border-left: 6px solid #4a7c44; 
+            padding-left: 15px; 
+            color: #4a7c44;
+        }
+
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .place-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .place-card:hover { transform: translateY(-10px); }
+        .place-img { height: 250px; background-size: cover; background-position: center; }
+        .place-info { padding: 25px; }
+        .place-info h3 { font-size: 22px; color: #333; margin-bottom: 10px; }
+        .place-info p { color: #666; line-height: 1.6; font-size: 15px; }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+        .back-btn:hover { background-color: #333; }
+
+        footer { text-align: center; padding: 40px; background: #333; color: white; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">WANDER.TH</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li><a href="central.html">ภาคกลาง</a></li>
+                <li><a href="north.html" style="color: #2d5a27;">ภาคเหนือ</a></li>
+                <li><a href="isan.html">ภาคอีสาน</a></li>
+                <li><a href="south.html">ภาคใต้</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>ภาคเหนือ</h1>
+        <p>เสน่ห์ล้านนา ขุนเขา และสายหมอก</p>
+    </section>
+
+    <div class="content-container">
+        <h2 class="section-title">สถานที่ท่องเที่ยวแนะนำ</h2>
+        
+        <div class="places-grid">
+            <div class="place-card">
+                <div class="place-img" style="background-image: url('https://images.unsplash.com/photo-1584804245607-939e6027a5f6?q=80&w=800');"></div>
+                <div class="place-info">
+                    <h3>วัดร่องขุ่น จ.เชียงราย</h3>
+                    <p>สถาปัตยกรรมสีขาวบริสุทธิ์ที่ออกแบบโดยอาจารย์เฉลิมชัย โฆษิตพิพัฒน์ สะท้อนถึงธรรมะและความวิจิตรบรรจงตามแบบศิลปะร่วมสมัย</p>
+                </div>
+            </div>
+
+            <div class="place-card">
+                <div class="place-img" style="background-image: url('https://images.unsplash.com/photo-1610212009311-665e711674be?q=80&w=800');"></div>
+                <div class="place-info">
+                    <h3>ดอยอินทนนท์ จ.เชียงใหม่</h3>
+                    <p>ยอดเขาที่สูงที่สุดในประเทศไทย สัมผัสอากาศหนาวเย็นตลอดทั้งปี ชมความงามของน้ำตกสิริธาร และพรรณไม้เมืองหนาวนานาชนิด</p>
+                </div>
+            </div>
+
+            <div class="place-card">
+                <div class="place-img" style="background-image: url('https://images.unsplash.com/photo-1628104882747-d3da08169128?q=80&w=800');"></div>
+                <div class="place-info">
+                    <h3>ปางอุ๋ง จ.แม่ฮ่องสอน</h3>
+                    <p>ฉายา "สวิตเซอร์แลนด์เมืองไทย" ล่องเรือชมทะเลสาบท่ามกลางสายหมอกยามเช้า และทิวสนสามใบที่ล้อมรอบบรรยากาศสุดโรแมนติก</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">← กลับหน้าหลัก</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 WANDER.TH - Thailand Travel Guide</p>
+    </footer>
+
+</body>
+</html>
