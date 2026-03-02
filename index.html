@@ -2,50 +2,194 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>WANDER Thailand - หน้าหลัก</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WANDER Thailand - เที่ยวเมืองไทย 5 ภาค</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Sarabun', sans-serif;
+            scroll-behavior: smooth; /* ทำให้เวลาคลิกเมนูแล้วเลื่อนนุ่มนวล */
+        }
+
+        body { background-color: #f4f7f6; color: #333; }
+
+        /* Navigation Bar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo { font-size: 24px; font-weight: bold; color: #2d5a27; }
+
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { 
+            text-decoration: none; 
+            color: #555; 
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        nav ul li a:hover { color: #2d5a27; }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            margin: 20px;
+            border-radius: 40px;
+        }
+
+        .hero h1 { font-size: 80px; letter-spacing: 10px; margin-bottom: 10px; }
+        .hero p { font-size: 20px; max-width: 600px; }
+
+        /* Content Sections */
+        section { padding: 80px 10%; }
+        h2 { font-size: 32px; margin-bottom: 30px; border-left: 5px solid #2d5a27; padding-left: 15px; }
+
+        /* Grid System */
+        .dest-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            height: 400px;
+            border-radius: 25px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            z-index: 1;
+        }
+
+        .card h3, .card p { position: relative; z-index: 2; }
+        .card h3 { font-size: 24px; }
+
+        /* Colors for different regions */
+        #central { background-color: #eef2f3; }
+        #north { background-color: #f1f8e9; }
+        #isan { background-color: #fff3e0; }
+        #south { background-color: #e3f2fd; }
+
+        footer { text-align: center; padding: 40px; background: #333; color: white; }
+    </style>
 </head>
 <body>
+
     <header>
         <div class="logo">WANDER.TH</div>
         <nav>
             <ul>
-                <li><a href="index.html">หน้าหลัก</a></li>
-                <li><a href="central.html">ภาคกลาง</a></li>
-                <li><a href="north.html">ภาคเหนือ</a></li>
-                <li><a href="isan.html">ภาคอีสาน</a></li>
-                <li><a href="south.html">ภาคใต้</a></li>
+                <li><a href="#">หน้าหลัก</a></li>
+                <li><a href="#central">ภาคกลาง</a></li>
+                <li><a href="#north">ภาคเหนือ</a></li>
+                <li><a href="#isan">ภาคอีสาน</a></li>
+                <li><a href="#south">ภาคใต้</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1528181304800-2f140819ad1c?q=80&w=2070');">
-        <h1>WANDER THAILAND</h1>
-        <p>ยินดีต้อนรับสู่ดินแดนแห่งรอยยิ้ม เลือกภาคที่คุณต้องการออกไปสำรวจ</p>
+    <section class="hero" id="home">
+        <h1>WANDER</h1>
+        <p>เปิดประสบการณ์การเดินทางครั้งใหม่ ในดินแดนมหัศจรรย์แห่งสยาม</p>
     </section>
 
-    <section>
-        <h2>เลือกจุดหมายของคุณ</h2>
+    <section id="central">
+        <h2>ภาคกลาง : อารยธรรมและวิถีเมือง</h2>
         <div class="dest-grid">
-            <a href="central.html" class="card" style="background-image: url('https://images.unsplash.com/photo-1590234934177-3e19879796e1?q=80&w=1000');">
-                <h3>ภาคกลาง</h3>
-                <p>เมืองหลวงและอารยธรรมลุ่มแม่น้ำ</p>
-            </a>
-            <a href="north.html" class="card" style="background-image: url('https://images.unsplash.com/photo-1584804245607-939e6027a5f6?q=80&w=1000');">
-                <h3>ภาคเหนือ</h3>
-                <p>ภูเขาสูง สายหมอก และวัฒนธรรมล้านนา</p>
-            </a>
-            <a href="isan.html" class="card" style="background-image: url('https://images.unsplash.com/photo-1623916298219-f5383f77918d?q=80&w=1000');">
-                <h3>ภาคอีสาน</h3>
-                <p>ถิ่นดินแดนที่เต็มไปด้วยภูมิปัญญาและประเพณี</p>
-            </a>
-            <a href="south.html" class="card" style="background-image: url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=1000');">
-                <h3>ภาคใต้</h3>
-                <p>ทะเลสีครามและหาดทรายขาวระดับโลก</p>
-            </a>
+            <div class="card" style="background-image: url('https://images.unsplash.com/photo-1590234934177-3e19879796e1?q=80&w=1974');">
+                <h3>กรุงเทพมหานคร</h3>
+                <p>วัดพระแก้วและแสงสีเสียงยามค่ำคืน</p>
+            </div>
+            <div class="card" style="background-image: url('https://images.unsplash.com/photo-1580914441926-7c09d5756306?q=80&w=2072');">
+                <h3>พระนครศรีอยุธยา</h3>
+                <p>ย้อนรอยประวัติศาสตร์ราชธานีเก่า</p>
+            </div>
         </div>
     </section>
 
-    <footer><p>&copy; 2024 WANDER.TH Project</p></footer>
+    <section id="north">
+        <h2>ภาคเหนือ : ขุนเขาและสายหมอก</h2>
+        <div class="dest-grid">
+            <div class="card" style="background-image: url('https://images.unsplash.com/photo-1584804245607-939e6027a5f6?q=80&w=2070');">
+                <h3>เชียงใหม่</h3>
+                <p>สัมผัสอากาศหนาวบนดอยอินทนนท์</p>
+            </div>
+            <div class="card" style="background-image: url('https://images.unsplash.com/photo-1528181304800-2f140819ad1c?q=80&w=2070');">
+                <h3>แม่ฮ่องสอน</h3>
+                <p>ล่องเรือชมวิวที่ปางอุ๋ง</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="isan">
+        <h2>ภาคอีสาน : ภูมิปัญญาและธรรมชาติ</h2>
+        <div class="dest-grid">
+            <div class="card" style="background-image: url('https://images.unsplash.com/photo-1623916298219-f5383f77918d?q=80&w=2070');">
+                <h3>นครราชสีมา</h3>
+                <p>อุทยานแห่งชาติเขาใหญ่ มรดกโลก</p>
+            </div>
+            <div class="card" style="background-image: url('https://images.unsplash.com/photo-1596402184320-417d717867cd?q=80&w=2070');">
+                <h3>อุบลราชธานี</h3>
+                <p>ชมพระอาทิตย์ขึ้นก่อนใครที่ผาแต้ม</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="south">
+        <h2>ภาคใต้ : สวรรค์แห่งทะเลอันดามัน</h2>
+        <div class="dest-grid">
+            <div class="card" style="background-image: url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=2039');">
+                <h3>ภูเก็ต</h3>
+                <p>พักผ่อนบนหาดทรายขาวระดับโลก</p>
+            </div>
+            <div class="card" style="background-image: url('https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=1935');">
+                <h3>กระบี่</h3>
+                <p>พายเรือคายัคและดำน้ำชมปะการัง</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 WANDER.TH - เว็บไซต์ประกอบการเรียนการสอน</p>
+    </footer>
+
 </body>
 </html>
