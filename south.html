@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ภาคใต้ - WANDER.TH</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Sarabun', sans-serif; }
+        body { background-color: #f4f7f6; color: #333; }
+
+        /* Navigation Bar */
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 8%; background: white; position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo { font-size: 24px; font-weight: bold; color: #2d5a27; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { text-decoration: none; color: #555; font-weight: 500; transition: 0.3s; }
+        nav ul li a:hover { color: #2d5a27; }
+
+        /* Hero ส่วนบน (ภาคใต้) */
+        .hero {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://storage.googleapis.com/fastwork-static/7ec43803-07f7-4b2e-84be-32db94a83527.jpg');
+            background-size: cover; 
+            background-position: center 30%; /* ปรับให้เห็นส่วนบนภาพตามสไตล์ที่คุณชอบ */
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            color: white; text-align: center; margin: 20px; border-radius: 30px;
+        }
+        .hero h1 { font-size: 60px; letter-spacing: 5px; }
+
+        /* Content Sections */
+        .content-container { padding: 50px 10%; }
+        .section-title { 
+            font-size: 32px; 
+            margin-bottom: 30px; 
+            border-left: 6px solid #0097a7; /* สีฟ้าทะเล */
+            padding-left: 15px; 
+            color: #0097a7;
+        }
+
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .place-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .place-card:hover { transform: translateY(-10px); }
+        .place-img { height: 250px; background-size: cover; background-position: center; }
+        .place-info { padding: 25px; }
+        .place-info h3 { font-size: 22px; color: #333; margin-bottom: 10px; }
+        .place-info p { color: #666; line-height: 1.6; font-size: 15px; }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+        .back-btn:hover { background-color: #333; }
+
+        footer { text-align: center; padding: 40px; background: #333; color: white; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">WANDER.TH</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li><a href="central.html">ภาคกลาง</a></li>
+                <li><a href="north.html">ภาคเหนือ</a></li>
+                <li><a href="isan.html">ภาคอีสาน</a></li>
+                <li><a href="south.html" style="color: #0097a7;">ภาคใต้</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>ภาคใต้</h1>
+        <p>สวรรค์แห่งท้องทะเลอันดามันและอ่าวไทย</p>
+    </section>
+
+    <div class="content-container">
+        <h2 class="section-title">สถานที่ท่องเที่ยวแนะนำ</h2>
+        
+        <div class="places-grid">
+            <div class="place-card">
+                <div class="place-img" style="background-image: url('https://www.krabipao.go.th/files/com_travel/2020-07_b6bbce1ec3c4e5b.jpg');"></div>
+                <div class="place-info">
+                    <h3>หมู่เกาะพีพี จ.กระบี่</h3>
+                    <p>อ่าวมาหยาและน้ำทะเลสีมรกตอันเลื่องชื่อระดับโลก สัมผัสความงามของหน้าผาหินปูนที่โอบล้อมหาดทรายขาวละเอียดราวกับสรวงสวรรค์</p>
+                </div>
+            </div>
+
+            <div class="place-card">
+                <div class="place-img" style="background-image: url('https://1672travelbuddy.com/article_images/78ff434d9e9bc0d74a90ac22a02ac7d9.jpg');"></div>
+                <div class="place-info">
+                    <h3>ย่านเมืองเก่าภูเก็ต</h3>
+                    <p>ชมอาคารสไตล์ชิโนโปรตุกีสที่มีสีสันสดใส เดินเล่นถ่ายรูปบนถนนถลาง พร้อมชิมอาหารพื้นเมืองรสเลิศที่เป็นเอกลักษณ์ของชาวภูเก็ต</p>
+                </div>
+            </div>
+
+            <div class="place-card">
+                <div class="place-img" style="background-image: url('https://s359.kapook.com/pagebuilder/d6d70979-060e-40df-a524-4d5d70472543.jpg');"></div>
+                <div class="place-info">
+                    <h3>อุทยานแห่งชาติเขาสก จ.สุราษฎร์ธานี</h3>
+                    <p>กุ้ยหลินเมืองไทย ณ เขื่อนเชี่ยวหลาน สัมผัสความสงบเงียบบนแพที่พัก ล้อมรอบด้วยเขาสูงชันและผืนน้ำสีเขียวมรกตสุดลูกหูลูกตา</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">← กลับหน้าหลัก</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 WANDER.TH - Thailand Travel Guide</p>
+    </footer>
+
+</body>
+</html>
